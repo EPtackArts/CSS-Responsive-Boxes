@@ -1,3 +1,38 @@
 body {
   background: blanchedalmond;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 3em;
+  
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  justify-content: space-between;
+}
+header, main, footer {
+  border: 5px dashed pink;
+  margin: .12em;
+}
+header, footer {
+  flex-grow: 1;
+}
+main {
+  flex-grow: 3;
+}
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header {
+    width: 100%;
+  }
+  main {
+    width: 70%;
+  }
+  footer {
+    width: 20%
+  }
 }
